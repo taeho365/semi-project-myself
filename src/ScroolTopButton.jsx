@@ -29,7 +29,7 @@ export default function ScroolTopButton() {
         <>
             {showButton && (
                 <button className="scroll-top-btn" onClick={scrolltoTop}>
-                    <img src="/images/608336.png" />
+                    <img src={`${import.meta.env.BASE_URL}/images/608336.png`} />
                 </button>
             )}
         </>
