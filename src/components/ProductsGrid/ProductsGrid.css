@@ -1,0 +1,230 @@
+.pg-container {
+    padding: 24px clamp(16px, 4vw, 80px);
+    box-sizing: border-box;
+    max-width: 1200px;
+    margin: 0 auto;
+
+}
+
+.pg-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 22px;
+}
+
+.pg-card {
+    background: #f2f4f7;
+    border-radius: 14px;
+    overflow: hidden;
+}
+
+.pg-imageWrap {
+    position: relative;
+    background: purple;
+    aspect-ratio: 3/4;
+    display: flex;
+    align-items: stretch;
+    justify-content: stretch;
+    overflow: hidden;
+
+}
+
+.pg-image {
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: cover; 
+
+}
+
+.pg-nameOverlay{
+    position: absolute;
+    left: 12px;
+    right: 12px;
+    bottom: 12px;
+    padding: 8px 10px;
+    border-radius: 12px;
+    background: rgba(255,255,255,0.85);
+    color: #000;
+    font-size: 18px;
+}
+
+.pg-meta {
+    padding: 10px 16px 14px;
+    background: #fff;
+}
+
+.pg-priceRow {
+    display: flex;
+    align-items: center;
+    justify-content: space-between; 
+    width: 100%;
+}
+
+.pg-rightControls {
+    display: flex;
+    align-items: center;
+}
+
+.pg-price {
+    font-size: 16px;
+    font-weight: 800;
+}
+
+.pg-qtySelect {
+    width: 110px;
+    height: 32px;
+    border: 1px solid #d1d5db;
+    border-radius: 10px;
+    padding: 0 10px;
+    background: #fff;
+    font-size: 12px;
+    cursor: pointer;
+    color: black;
+}
+
+.pg-titleBar {
+    margin: 8px 0 18px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 80px;  
+}
+
+.pg-title {
+    font-size: 22px;
+    font-weight: 800;
+    letter-spacing: -0.4px;
+    margin: 0;
+}
+
+.pg-subTitle {
+    font-weight: 400;
+    margin: 0;
+    font-size: 16px;
+    color: black;
+}
+
+.pg-qtySelect:focus {
+    outline: none;
+    border-color: #111827;
+}
+
+.pg-premiumBadge{
+    position: absolute;
+    top: 0; 
+    left: 0;
+    z-index: 5;
+    
+    padding: 6px 10px;
+    border-radius: 999px;
+    background: rgba(17, 24, 39, 0.9);
+    color: yellow;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: -0.2px;
+
+    pointer-events: none;
+}
+
+.pg-badge--premium { 
+    position: absolute;
+    top: 0; 
+    left: 0;
+    z-index: 5;
+    
+    padding: 6px 10px;
+    border-radius: 999px;
+    background: rgba(17, 24, 39, 0.9);
+    color: yellow;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: -0.2px;
+
+    pointer-events: none;
+}
+
+.pg-badge--steady  { 
+    position: absolute;
+    top: 0; 
+    left: 0;
+    z-index: 5;
+    
+    padding: 6px 10px;
+    border-radius: 999px;
+    background: rgb(152, 251, 226);
+    color: black;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: -0.2px;
+
+    pointer-events: none;
+}
+
+.pg-badge--select  { 
+    position: absolute;
+    top: 0; 
+    left: 0;
+    z-index: 5;
+    
+    padding: 6px 10px;
+    border-radius: 999px;
+    background: palevioletred;
+    color: white;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: -0.2px;
+
+    pointer-events: none;
+}
+
+.pg-badge--new     { 
+    position: absolute;
+    top: 0; 
+    left: 0;
+    z-index: 5;
+    
+    padding: 6px 10px;
+    border-radius: 999px;
+    background: red;
+    color: yellow;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: -0.2px;
+
+    pointer-events: none;
+}
+
+.pg-badge--best    { 
+    position: absolute;
+    top: 0; 
+    left: 0;
+    z-index: 5;
+    
+    padding: 6px 10px;
+    border-radius: 999px;
+    background: rgb(173, 135, 235);
+    color: greenyellow;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: -0.2px;
+
+    pointer-events: none;
+}
+
+.pg-mediaBox{
+    position: relative;     
+    width: 100%;
+    height: 100%;
+}
+
+@media (max-width: 980px) {
+    .pg-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+@media (max-width: 640px) {
+    .pg-grid {
+        grid-template-columns: 1fr;
+    }
+}

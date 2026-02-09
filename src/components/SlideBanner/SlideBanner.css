@@ -1,0 +1,133 @@
+.slideBanner {
+  position: relative;
+  width: 100%;
+  height: 500px;
+  overflow: hidden;
+}
+
+.slide {
+  position: absolute;
+  inset: 0;
+  background-size: cover;
+  background-position: center;
+  opacity: 0;
+  transition: opacity 1.5s ease-in-out;
+}
+
+.slide.active {
+  opacity: 1;
+}
+
+.overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    90deg,
+    rgba(255, 255, 255, 0.85) 0%,
+    rgba(255, 255, 255, 0.55) 35%,
+    rgba(255, 255, 255, 0.15) 65%,
+    rgba(255, 255, 255, 0) 100%
+  );
+}
+
+.content {
+  position: absolute;
+  left: 20%;
+  top: 50%;
+  transform: translateY(-50%);
+  max-width: 520px;
+  z-index: 2;
+  color: #0e0e0e;
+}
+
+.title {
+  font-size: 38px;
+  line-height: 1.2;
+  margin: 0 0 12px 0;
+}
+
+.desc {
+  font-size: 18px;
+  line-height: 1.6;
+  margin: 0;
+  color: #333;
+}
+
+.ctaWrap {
+  display: flexbox;
+  gap: 12px;
+  margin-top: 22px;
+}
+
+.ctaBtn {
+  margin: 10px;
+  padding: 12px 26px;
+  border-radius: 800px;
+  font-size: 15px;
+  cursor: pointer;
+  transition: all 0.25s ease;
+  border: none;
+  white-space: nowrap;
+}
+
+/* 메인 CTA */
+.ctaBtn.primary {
+  background: transparent;
+  border: 1px solid #111;
+  color: #000000;
+  font-weight: 600;
+}
+
+.ctaBtn.primary:hover {
+  background: #111;
+  color: #fff;
+}
+
+/* 보조 CTA */
+.ctaBtn.outline {
+  background: transparent;
+  border: 1px solid #111;
+  color: #000000;
+  font-weight: 600;
+}
+
+.ctaBtn.outline:hover {
+  background: #111;
+  color: #fff;
+}
+
+/* 하단 점 인디케이터 */
+.dots {
+  position: absolute;
+  left: 50%;
+  bottom: 18px;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 20px;
+  z-index: 3;
+  outline: none;
+  border: none;
+}
+
+.dot {
+  width: 5px;
+  height: 15px;
+  border-radius: 50%;
+  border: none;
+  cursor: pointer;
+  background: rgba(104, 106, 110, 0.144);
+  transition: transform 0.2s ease, background 0.2s ease;
+  outline: none;
+  border: none;
+}
+
+.dot.on {
+  transform: scale(1.2);
+  background: rgba(10, 10, 10, 0.144);
+  outline: none;
+  border: none;
+}
+
+.dot:focus-visible {
+  outline: none;
+}

@@ -1,0 +1,113 @@
+/* footer 전체 배경/테두리/기본 글자색 설정 */
+.footer{
+  /* footer 배경색(연한 회색) */
+  background: #f3f4f6;
+  /* 위쪽 경계선(아주 연한 선) */
+  border-top: 1px solid rgba(0,0,0,0.06);
+  /* footer 기본 글자색 */
+  color: #222;
+}
+
+/* footer 내부 컨텐츠를 가운데 정렬하고 폭/패딩 설정 */
+.footer-inner{
+  
+  /* 위/좌우/아래 패딩 */
+  padding: 6px 24px 4px;
+}
+
+/* 컬럼 공통: 내용이 너무 길 때 레이아웃 깨짐 방지용 */
+.f-col{ 
+  /* grid/flex에서 overflow 처리 안정화(긴 텍스트 줄바꿈에 도움) */
+  min-width: 0; 
+}
+
+/* 가운데 컬럼: 시각적으로 정확히 중앙에 오게 맞춤 */
+/* 가운데 컬럼을 정확히 중앙 느낌으로 */
+.f-center{
+  /* 텍스트 가운데 정렬 */
+  text-align: center;
+  /* 그리드 셀 자체를 중앙에 배치 */
+  justify-self: center;  /* 그리드 중앙 */
+}
+
+
+/* 일반 안내 문구 스타일 */
+.f-text{
+  /* 아래쪽만 여백 */
+  margin: 0 0 3px;
+  /* 글자 크기 */
+  font-size: 13.5px;
+  /* 살짝 굵게 */
+  font-weight: 600;
+  /* 연한 검정 */
+  color: rgba(0,0,0,0.6);
+  /* 줄간격 */
+  line-height: 1.4;
+}
+
+/* 위/아래 섹션 구분선 */
+/*구분선*/
+.f-divider{
+  /* 선 두께 */
+  height: 1px;
+  /* 선 색 */
+  background: rgba(0,0,0,0.08);
+  /* 위/아래 여백 */
+  margin: 6px 0 0px;
+}
+
+/* footer 하단 영역: 회사정보/카피라이트 등 묶음 */
+.footer-bottom{
+  /* 세로로 쌓기 위해 grid 사용 */
+  display: grid;
+  /* 줄 간 간격 */
+  gap: 6px;
+}
+
+/* 회사정보 텍스트 블록 */
+.f-company{
+  /* 글자 크기 */
+  font-size: 12.5px;
+  /* 연한 검정 */
+  color: rgba(0,0,0,0.62);
+  /* 살짝 굵게 */
+  font-weight: 600;
+  /* 줄간격 */
+  line-height: 1.7;
+}
+
+/* 회사정보 안의 p 기본 여백 조절 */
+.f-company p{
+  /* 아래쪽만 여백 */
+  margin: 0 0 3px;
+}
+
+/* 회사정보에서 '키(라벨)'처럼 더 진하게 보이는 부분 */
+.f-company .k{
+  /* 매우 굵게 */
+  font-weight: 900;
+  /* 조금 더 진한 색 */
+  color: rgba(0,0,0,0.72);
+  /* 라벨과 값 사이 간격 */
+  margin-right: 6px;
+}
+
+/* 항목 사이 구분자(예: | 또는 · 같은 역할) */
+.sep{
+  /* 좌우 여백 */
+  margin: 0 8px;
+  /* 연한 회색 */
+  color: rgba(0,0,0,0.35);
+}
+
+/* 카피라이트 문구 */
+.f-copy{
+  /* 기본 마진 제거 */
+  margin: 0;
+  /* 글자 크기 */
+  font-size: 12px;
+  /* 더 연한 색 */
+  color: rgba(0,0,0,0.5);
+  /* 살짝 굵게 */
+  font-weight: 600;
+}

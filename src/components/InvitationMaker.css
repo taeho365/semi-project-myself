@@ -1,0 +1,395 @@
+:root {
+  --secondary: #f8f5f1;
+  --accent: #d4a373;
+  --text: #444;
+  --border: #e5ddd5;
+}
+
+.invitation-maker {
+  min-height: 100vh;
+  background: #f8f5f1;
+  padding: 2rem 0;
+}
+
+.container {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 2rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr; 
+  gap: 3rem;
+}
+
+/* 편집 섹션 */
+.editor-section {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  order: 2;
+}
+
+.form-section {
+  background: white;
+  padding: 2rem;
+  padding-top: 0.7rem;
+  border-radius: 16px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
+}
+
+.section-title {
+  font-family: "맑은고딕";
+  font-size: 1.4rem;
+  border-bottom: 2px solid var(--accent);
+  padding-bottom: 1rem;
+}
+
+.form-group {
+  margin-bottom: 1.5rem;
+}
+
+.form-group:last-child {
+  margin-bottom: 0;
+}
+
+.form-label {
+  margin-bottom: 0.5rem;
+
+  color: #000000;
+  font-size: 1rem;
+  font-family: "맑은 고딕";
+}
+
+.form-input {
+  width: 100%;
+  padding: 0.7rem 0;
+  display: flex;
+  
+  color: #000000;
+  border: 1.5px solid var(--border);
+  border-radius: 8px;
+  font-family: "맑은고딕";
+  font-size: 1rem;
+  background: #fafafa;
+}
+
+.form-input:focus {
+  outline: none;
+  border-color: var(--accent);
+  background: white;
+  box-shadow: 0 0 0 3px rgba(212, 163, 115, 0.1);
+}
+
+.form-textarea {
+  resize: vertical;
+  min-height: 120px;
+  line-height: 1.8;
+}
+
+.name-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+/* 템플릿 그리드 */
+.template-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+  gap: 1rem;
+}
+
+.template-item {
+  aspect-ratio: 2/3;
+  border: 2px solid var(--border);
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+  background: #f0ebe5;
+}
+
+.template-item:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+  border-color: var(--accent);
+}
+
+.template-item.active {
+  border-color: var(--accent);
+  border-width: 3px;
+  box-shadow: 0 4px 16px rgba(212, 163, 115, 0.3);
+}
+
+.template-name {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(255, 255, 255, 0.95);
+  padding: 0.5rem;
+  text-align: center;
+  font-size: 0.8rem;
+  font-weight: 600;
+  font-family: "맑은 고딕";
+}
+
+/* 액션 버튼 */
+.action-buttons {
+  display: flex;
+  gap: 1rem;
+}
+
+.btn {
+  flex: 1;
+  padding: 1rem;
+  border: none;
+  border-radius: 8px;
+  font-family: 'Noto Serif KR', serif;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.btn-secondary {
+  background: white;
+  color: #000000;
+  border: 2px solid var(--border);
+}
+
+.btn-secondary:hover {
+  border-color: var(--accent);
+  background: #f7f7f7;
+}
+
+.btn-primary {
+  background: var(--accent);
+  color: white;
+}
+
+.btn-primary:hover {
+  background: #c7813c;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(212, 163, 115, 0.4);
+}
+
+/* 미리보기 섹션 */
+.preview-section {
+  position: sticky;
+  top: 2rem;
+  background: white;
+  padding-top: 1rem;
+  padding-bottom: 2rem;
+  border-radius: 16px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
+  height: fit-content;
+}
+
+.phone-frame {
+  max-width: 500px;
+  margin: 0 auto;
+  background: rgb(243, 242, 242);
+  border: 5px solid #d4d0d0;
+  border-radius: 16px;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.15);
+  position: relative;
+}
+
+.invitation-preview {
+  background: var(--secondary);
+  min-height: 600px;
+  border-radius: 5px;
+  padding: 5rem 1.5rem;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.invitation-preview::before {
+  content: '';
+  position: absolute;
+  height: 100%;
+}
+
+/* 테마별 스타일 */
+.invitation-preview.theme-classic {
+  background: radial-gradient(
+  ellipse,
+  rgba(255, 255, 255, 0.95) 0%,
+    rgba(255, 255, 255, 0.88) 32%,
+    rgba(255, 255, 255, 0.55) 55%,
+    rgba(255, 255, 255, 0) 78%
+);
+}
+
+.invitation-preview.theme-modern {
+  background: radial-gradient(
+  ellipse,
+  rgba(255, 250, 252, 0.95) 0%, /* 거의 흰색 */
+    rgba(255, 235, 242, 0.88) 32%, /* 아주 연핑크 */
+    rgba(255, 220, 232, 0.55) 55%,
+    rgba(255, 220, 232, 0) 78%
+);
+}
+
+.invitation-preview.theme-elegant {
+  background: radial-gradient(
+  ellipse,
+  rgba(250, 252, 255, 0.95) 0%, /* 거의 흰색 */
+    rgba(190, 222, 255, 0.88) 32%, /* 아주 연블루 */
+    rgba(221, 235, 252, 0.55) 55%,
+    rgba(215, 233, 255, 0) 78%
+);
+}
+
+.invitation-preview.theme-minimal {
+  background: radial-gradient(
+  ellipse,
+ rgba(255, 253, 250, 0.95) 0%, /* 거의 흰색 */
+    rgba(255, 242, 228, 0.88) 32%, /* 아주 연오렌지 */
+    rgba(255, 225, 200, 0.55) 55%,
+    rgba(255, 225, 200, 0) 78%
+);
+}
+
+.preview-date {
+  font-family: "맑은 고딕";
+  font-size: 1.2rem;
+  font-weight: 400;
+  color: var(--primary);
+  margin-bottom: 0.5rem;
+  letter-spacing: 0.1em;
+}
+
+.preview-day {
+  font-size: 1rem;
+  color: var(--text);
+}
+
+.preview-divider {
+  width: 60px;
+  height: 2px;
+  background: var(--accent);
+  margin: 2rem auto;
+}
+
+.preview-invitation {
+  font-size: 0.85rem;
+  color: var(--accent);
+  margin-bottom: 1rem;
+  letter-spacing: 0.3em;
+}
+
+.preview-title {
+  font-family: "맑은 고딕";
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: #000000;
+  margin-bottom: 1.5rem;
+}
+
+.preview-message {
+  font-size: 1rem;
+  line-height: 1.8;
+  color: var(--text);
+  margin-bottom: 2rem;
+  white-space: pre-line;
+}
+
+.preview-names {
+  font-family: "맑은 고딕";
+  display: flex;
+
+}
+
+.dot {
+  font-size: 0.5rem;
+  padding: 10px 8px;
+
+}
+
+.spacebar {
+  display: flex;
+  padding-top: 4px;
+  padding-right: 20px;
+}
+
+.preview-center {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+
+}
+
+.preview-name {
+  font-size: 1.3rem;
+  font-weight: bold;
+  color: #000000;
+
+}
+
+.preview-heart {
+  margin: 1rem 0;
+  font-size: 0.9rem;
+}
+
+.preview-details {
+  font-size: 0.85rem;
+  line-height: 1.6;
+  color: var(--text);
+}
+
+.preview-time {
+  margin-bottom: 0.5rem;
+}
+
+.preview-venue {
+  font-weight: 500;
+}
+
+/* 애니메이션 */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* 반응형 */
+@media (max-width: 768px) {
+  .container {
+    padding: 0 1rem;
+  }
+
+  .form-section {
+    padding: 1.5rem;
+  }
+
+  .name-row {
+    grid-template-columns: 1fr;
+  }
+
+  .phone-frame {
+    max-width: 100%;
+    border-width: 8px;
+  }
+
+  .section-title {
+    font-size: 1.2rem;
+  }
+}
