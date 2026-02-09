@@ -2,10 +2,11 @@ import "./Products.css";
 import { useEffect, useMemo, useState } from "react";
 import { useNavigate } from "react-router-dom";
 
+const BASE = import.meta.env.BASE_URL;
 const bestPickSlides = [
   {
     id: 1,
-    src: "/images/p1.jpg",
+    src: `${BASE}images/p1.jpg`,
     alt: "BEST Pick 1",
     title: "Memory",
     desc: "내추럴한 용지위에 깔끔한 서체로 예식정보만을 담은 담백한 무드의 청첩장",
@@ -13,7 +14,7 @@ const bestPickSlides = [
   },
   {
     id: 2,
-    src: "/images/p2.jpg",
+    src: `${BASE}images/p2.jpg`,
     alt: "BEST Pick 2",
     title: "Sunlight",
     desc: "감각적인 영문 타이포 그래피와 컬러 색지 봉투로 완성도를 높인 웨딩 카드",
@@ -21,7 +22,7 @@ const bestPickSlides = [
   },
   {
     id: 3,
-    src: "/images/p3.jpg",
+    src: `${BASE}images/p3.jpg`,
     alt: "BEST Pick 3",
     title: "Summer",
     desc: "투명한 아크릴로 제작하여 더욱 특별한 프리미엄 청첩장",
@@ -29,7 +30,7 @@ const bestPickSlides = [
   },
   {
     id: 4,
-    src: "/images/p4.jpg",
+    src: `${BASE}images/p4.jpg`,
     alt: "BEST Pick 4",
     title: "The Mood",
     desc: "심플한 디자인에 실링 왁스 스티커가 고급스러움을 더해주는 청첩장",
@@ -37,7 +38,7 @@ const bestPickSlides = [
   },
   {
     id: 5,
-    src: "/images/p5.jpg",
+    src: `${BASE}images/p5.jpg`,
     alt: "BEST Pick 5",
     title: "sunset",
     desc: "빛에 따라 고급스럽게 반짝이는 티아라가 돋보이는 청첩장",

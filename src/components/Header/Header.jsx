@@ -12,7 +12,7 @@ export default function Header({ isLogin, setIsLogin }) {
       <div className="header-inner">
         <div className="left-group">
           <Link to="/">
-            <img className="logo1" src="/images/weddinglogo.png" alt="logo" />
+            <img className="logo1" src={`${import.meta.env.BASE_URL}images/weddinglogo.png`} alt="logo" />
           </Link>
           
           <ul className="list">

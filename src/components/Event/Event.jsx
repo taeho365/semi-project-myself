@@ -5,7 +5,7 @@ export default function Event() {
         <section className="event-page">
             <div className="event-card">
                 <img
-                    src="./public/images/event.jpg"
+                    src={`${import.meta.env.BASE_URL}/images/event.jpg`}
                     className="event-image"
                 />
 

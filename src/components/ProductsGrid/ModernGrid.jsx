@@ -7,16 +7,18 @@ const QTY_OPTIONS = [50, 100, 200, 450, 700, 1000];
 const formatKRW = (value) =>
   new Intl.NumberFormat("ko-KR").format(value) + "원";
 
+const BASE = import.meta.env.BASE_URL;
+
 const PRODUCTS = [
-  { id: 1, name: "Love is", image: "/images/wd.jpg", basePrice: 42000, badge: "Premium", badgeType: "premium" },
-  { id: 2, name: "봄날", image: "/images/wd2.jpg", basePrice: 39000 },
-  { id: 3, name: "티아라", image: "/images/wd3.jpg", basePrice: 48000, badge: "New", badgeType: "new" },
-  { id: 4, name: "Delight Pink", image: "/images/wd4.jpg", basePrice: 27000, badge: "Steady", badgeType: "steady" },
-  { id: 5, name: "The Wedding", image: "/images/wd5.jpg", basePrice: 42000 },
-  { id: 6, name: "사랑빛", image: "/images/wd6.jpg", basePrice: 32500 },
-  { id: 7, name: "BLANC II", image: "/images/wd7.jpg", basePrice: 45500 },
-  { id: 8, name: "A NEW DAY", image: "/images/wd8.jpg", basePrice: 29000 },
-  { id: 9, name: "샤이닝", image: "/images/wd9.jpg", basePrice: 47000 },
+  { id: 1, name: "Love is", image: `${BASE}images/wd.jpg`, basePrice: 42000, badge: "Premium", badgeType: "premium" },
+  { id: 2, name: "봄날", image: `${BASE}images/wd2.jpg`, basePrice: 39000 },
+  { id: 3, name: "티아라", image: `${BASE}images/wd3.jpg`, basePrice: 48000, badge: "New", badgeType: "new" },
+  { id: 4, name: "Delight Pink", image: `${BASE}images/wd4.jpg`, basePrice: 27000, badge: "Steady", badgeType: "steady" },
+  { id: 5, name: "The Wedding", image: `${BASE}images/wd5.jpg`, basePrice: 42000 },
+  { id: 6, name: "사랑빛", image: `${BASE}images/wd6.jpg`, basePrice: 32500 },
+  { id: 7, name: "BLANC II", image: `${BASE}images/wd7.jpg`, basePrice: 45500 },
+  { id: 8, name: "A NEW DAY", image: `${BASE}images/wd8.jpg`, basePrice: 29000 },
+  { id: 9, name: "샤이닝", image: `${BASE}images/wd9.jpg`, basePrice: 47000 },
 ];
 
 function ProductCard({ product, isFirst }) {

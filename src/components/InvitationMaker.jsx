@@ -6,7 +6,7 @@ export default function InvitationMaker() {
   const location = useLocation();
 
   const productImage =
-    location.state?.product?.image;
+    location.state?.product?.image;  
   
   const [formData, setFormData] = useState({
     date: '2026-02-02',

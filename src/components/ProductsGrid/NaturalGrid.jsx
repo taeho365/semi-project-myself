@@ -7,16 +7,17 @@ const QTY_OPTIONS = [50, 100, 200, 450, 700, 1000];
 const formatKRW = (value) =>
   new Intl.NumberFormat("ko-KR").format(value) + "원";
 
+const BASE = import.meta.env.BASE_URL;
 const PRODUCTS = [
-  { id: 1, name: "Our Wedding Day", image: "/images/Natural1.jpg", basePrice: 92000, badge: "Premium", badgeType: "premium" },
-  { id: 2, name: "Grace, Lake, Couple", image: "/images/Natural2.jpg", basePrice: 70000, badge: "Best", badgeType: "best" },
-  { id: 3, name: "Couple on the Hill", image: "/images/Natural3.jpg", basePrice: 60000, badge: "Steady", badgeType: "steady" },
-  { id: 4, name: "Evening Sky Kiss", image: "/images/Natural4.jpg", basePrice: 59000 },
-  { id: 5, name: "Film and Couple", image: "/images/Natural5.jpg", basePrice: 65000 },
-  { id: 6, name: "Sea and Couple", image: "/images/Natural6.jpg", basePrice: 52500 },
-  { id: 7, name: "A Porch in Grace", image: "/images/Natural7.jpg", basePrice: 57500 },
-  { id: 8, name: "Couple Dance in Green", image: "/images/Natural8.jpg", basePrice: 45000 },
-  { id: 9, name: "Couple Dance Flower", image: "/images/Natural9.jpg", basePrice: 85000 },
+  { id: 1, name: "Our Wedding Day", image: `${BASE}images/Natural1.jpg`, basePrice: 92000, badge: "Premium", badgeType: "premium" },
+  { id: 2, name: "Grace, Lake, Couple", image: `${BASE}images/Natural2.jpg`, basePrice: 70000, badge: "Best", badgeType: "best" },
+  { id: 3, name: "Couple on the Hill", image: `${BASE}images/Natural3.jpg`, basePrice: 60000, badge: "Steady", badgeType: "steady" },
+  { id: 4, name: "Evening Sky Kiss", image: `${BASE}images/Natural4.jpg`, basePrice: 59000 },
+  { id: 5, name: "Film and Couple", image: `${BASE}images/Natural5.jpg`, basePrice: 65000 },
+  { id: 6, name: "Sea and Couple", image: `${BASE}images/Natural6.jpg`, basePrice: 52500 },
+  { id: 7, name: "A Porch in Grace", image: `${BASE}images/Natural7.jpg`, basePrice: 57500 },
+  { id: 8, name: "Couple Dance in Green", image: `${BASE}images/Natural8.jpg`, basePrice: 45000 },
+  { id: 9, name: "Couple Dance Flower", image: `${BASE}images/Natural9.jpg`, basePrice: 85000 },
 ];
 
 function ProductCard({ product, isFirst }) {

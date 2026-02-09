@@ -1,12 +1,14 @@
 import "./SlideBanner.css";
 import { useEffect, useRef, useState } from "react";
+import { useNavigate } from "react-router-dom";
 
 export default function SlideBanner({isLogin}) {
   
+  const BASE = import.meta.env.BASE_URL;
   const banners = [
     {
       id: 0,
-      image: "/images/vi03.jpg",
+      image: `${BASE}images/vi03.jpg`,
       title: "Classic Design",
       desc: "Classic, Premium 고급스럽고 포멀한 디자인 청첩장",
       cta1: "상품목록 보기",
@@ -16,7 +18,7 @@ export default function SlideBanner({isLogin}) {
     },
     {
       id: 1,
-      image: "/images/vi07.jpg",
+      image: `${BASE}images/vi07.jpg`,
       title: "Modern Design",
       desc: "세련되고 현대적인 감성의 고급 청첩장 디자인",
       cta1: "상품목록 보기",
@@ -26,7 +28,7 @@ export default function SlideBanner({isLogin}) {
     },
     {
       id: 2,
-      image: "/images/abc.jpg",
+      image: `${BASE}images/abc.jpg`,
       title: "Natural Design",
       desc: "자연의 싱그럽고 따뜻한 느낌을 살려주는 청첩장 디자인",
       cta1: "상품목록 보기",
@@ -36,7 +38,7 @@ export default function SlideBanner({isLogin}) {
     },
     {
       id: 3,
-      image: "/images/vi01.jpg",
+      image: `${BASE}images/vi01.jpg`,
       title: "Romantic Design",
       desc: "사랑스럽고 포근한 Romantic 디자인 청첩장",
       cta1: "상품목록 보기",
@@ -70,10 +72,10 @@ export default function SlideBanner({isLogin}) {
     // app02 언마운트제어에서 배운 부분(클린업함수=>유즈이펙트가 리턴하는 함수)
   }, [isPaused]);
 
+  const navigate = useNavigate();
+
   const onClickCTA = (link) => {
-    // ✅ 라우터 아직 안 붙였을 수도 있으니, 일단 기본 이동으로 처리
-    // React Router 쓴다면 navigate()로 바꾸면 됨.
-    window.location.href = link;
+    navigate(link);
   };
 
   return (

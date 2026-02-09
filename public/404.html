@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Redirecting...</title>
+    <script>
+      const redirect =
+        location.pathname + location.search + location.hash;
+
+      location.replace(
+        "/semi-project-myself/?redirect=" + encodeURIComponent(redirect)
+      );
+    </script>
+  </head>
+  <body>
+    Redirecting...
+  </body>
+</html>

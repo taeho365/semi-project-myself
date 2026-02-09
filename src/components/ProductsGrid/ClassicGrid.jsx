@@ -7,16 +7,17 @@ const QTY_OPTIONS = [50, 100, 200, 450, 700, 1000];
 const formatKRW = (value) =>
   new Intl.NumberFormat("ko-KR").format(value) + "원";
 
+const BASE = import.meta.env.BASE_URL;
 const PRODUCTS = [
-  { id: 1, name: "우리의 순간", image: "/images/wedding.jpg", basePrice: 54000, badge: "Best", badgeType: "best" },
-  { id: 2, name: "Of love", image: "/images/wedding2.jpg", basePrice: 42000, badge: "New", badgeType: "new" },
-  { id: 3, name: "리틀 트윙클", image: "/images/wedding3.jpg", basePrice: 61000 },
-  { id: 4, name: "The Honeymoon", image: "/images/wedding4.jpg", basePrice: 39000 },
-  { id: 5, name: "For Love", image: "/images/wedding5.jpg", basePrice: 45000 },
-  { id: 6, name: "로즈가든", image: "/images/wedding6.jpg", basePrice: 52500 },
-  { id: 7, name: "스노우 엔젤", image: "/images/wedding7.jpg", basePrice: 27500 },
-  { id: 8, name: "Flora & Mood", image: "/images/wedding8.jpg", basePrice: 35000, badge: "Select", badgeType: "select" },
-  { id: 9, name: "Gentle Invite", image: "/images/wedding9.jpg", basePrice: 55000 },
+  { id: 1, name: "우리의 순간", image: `${BASE}images/wedding.jpg`, basePrice: 54000, badge: "Best", badgeType: "best" },
+  { id: 2, name: "Of love", image: `${BASE}images/wedding2.jpg`, basePrice: 42000, badge: "New", badgeType: "new" },
+  { id: 3, name: "리틀 트윙클", image: `${BASE}images/wedding3.jpg`, basePrice: 61000 },
+  { id: 4, name: "The Honeymoon", image: `${BASE}images/wedding4.jpg`, basePrice: 39000 },
+  { id: 5, name: "For Love", image: `${BASE}images/wedding5.jpg`, basePrice: 45000 },
+  { id: 6, name: "로즈가든", image: `${BASE}images/wedding6.jpg`, basePrice: 52500 },
+  { id: 7, name: "스노우 엔젤", image: `${BASE}images/wedding7.jpg`, basePrice: 27500 },
+  { id: 8, name: "Flora & Mood", image: `${BASE}images/wedding8.jpg`, basePrice: 35000, badge: "Select", badgeType: "select" },
+  { id: 9, name: "Gentle Invite", image: `${BASE}images/wedding9.jpg`, basePrice: 55000 },
 ];
 
 function ProductCard({ product, isFirst }) {

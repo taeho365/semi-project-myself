@@ -1,5 +1,6 @@
 import { useState } from 'react';
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import { useEffect } from 'react';
+import { BrowserRouter, Routes, Route, useNavigate } from 'react-router-dom';
 import "./App.css";
 
 import Header from "./components/Header/Header";
@@ -17,6 +18,18 @@ import Event from "./components/Event/Event";
 
 import ScroolTopButton from "./ScroolTopButton";
 
+function RedirectHandeler(){
+  const navigate=useNavigate();
+  useEffect(()=>{
+    const params = new URLSearchParams(window.location.search);
+    const redirect = params.get('redirect');
+    if(redirect){
+      navigate(redirect.replace('/semi-project-myself',''),{replace: true})
+    }//if
+  },[]);
+  return null;
+}//function
+
 export default function App() {
 
   const [isLogin, setIsLogin] = useState(() => {
@@ -24,8 +37,9 @@ export default function App() {
   });
 
   return (
-    <BrowserRouter>
-      
+    <BrowserRouter basename={import.meta.env.BASE_URL}>
+    <RedirectHandeler />
+
       <Header isLogin={isLogin} setIsLogin={setIsLogin} />
       
       <Routes>
@@ -46,6 +60,7 @@ export default function App() {
       <ScroolTopButton />
 
       <Footer />
+
     </BrowserRouter>
   );
 }

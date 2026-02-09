@@ -7,16 +7,17 @@ const QTY_OPTIONS = [50, 100, 200, 450, 700, 1000];
 const formatKRW = (value) =>
   new Intl.NumberFormat("ko-KR").format(value) + "원";
 
+const BASE = import.meta.env.BASE_URL;
 const PRODUCTS = [
-  { id: 1, name: "Never Ending Love", image: "/images/wil1.jpg", basePrice: 92000, badge: "Premium", badgeType: "premium" },
-  { id: 2, name: "Summer", image: "/images/wil2.jpg", basePrice: 70000 },
-  { id: 3, name: "Married", image: "/images/wil3.jpg", basePrice: 60000, badge: "Select", badgeType: "select" },
-  { id: 4, name: "BloSSome", image: "/images/wil4.jpg", basePrice: 59000 },
-  { id: 5, name: "Our Love", image: "/images/wil5.jpg", basePrice: 65000 },
-  { id: 6, name: "Miracle", image: "/images/wil6.jpg", basePrice: 52500, badge: "Best", badgeType: "best" },
-  { id: 7, name: "Save The Date", image: "/images/wil7.jpg", basePrice: 57500 },
-  { id: 8, name: "BLANC", image: "/images/wil8.jpg", basePrice: 45000 },
-  { id: 9, name: "Eternal shine", image: "/images/wil9.jpg", basePrice: 85000 },
+  { id: 1, name: "Never Ending Love", image: `${BASE}images/wil1.jpg`, basePrice: 92000, badge: "Premium", badgeType: "premium" },
+  { id: 2, name: "Summer", image: `${BASE}images/wil2.jpg`, basePrice: 70000 },
+  { id: 3, name: "Married", image: `${BASE}images/wil3.jpg`, basePrice: 60000, badge: "Select", badgeType: "select" },
+  { id: 4, name: "BloSSome", image: `${BASE}images/wil4.jpg`, basePrice: 59000 },
+  { id: 5, name: "Our Love", image: `${BASE}images/wil5.jpg`, basePrice: 65000 },
+  { id: 6, name: "Miracle", image: `${BASE}images/wil6.jpg`, basePrice: 52500, badge: "Best", badgeType: "best" },
+  { id: 7, name: "Save The Date", image: `${BASE}images/wil7.jpg`, basePrice: 57500 },
+  { id: 8, name: "BLANC", image: `${BASE}images/wil8.jpg`, basePrice: 45000 },
+  { id: 9, name: "Eternal shine", image: `${BASE}images/wil9.jpg`, basePrice: 85000 },
 ];
 
 function ProductCard({ product, isFirst }) {
